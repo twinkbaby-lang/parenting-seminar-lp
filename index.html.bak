@@ -1,5 +1,4 @@
 <!doctype html>
-<!-- 画像リンク反映版: 2026-06-17 JST / GitHub Pages用 -->
 <html lang="ja">
 <head>
   <meta charset="utf-8">
@@ -14,14 +13,11 @@
       各figure内のコメントにある <img src="..."> を有効化し、placeholder divを削除してください。
 
       推奨画像ファイル名例：
-      - images/hero_mother_child.webp        : ヒーロー画像
-      - images/worried_mother.webp           : 悩みセクション画像
-      - images/lecturer.webp                 : 講師写真
-      - images/consultation.webp             : 個別相談画像
-      - images/gift_materials.webp           : 参加特典画像
-      - images/voice_mama_6.webp             : 参加者の声アイコン
-      - images/voice_mama_4.webp             : 参加者の声アイコン
-      - images/voice_mama_8.webp             : 参加者の声アイコン
+      - assets/hero_mother_child.webp        : ヒーロー画像
+      - assets/worried_mother.webp           : 悩みセクション画像
+      - assets/lecturer.webp                 : 講師写真
+      - assets/consultation.webp             : 個別相談画像
+      - assets/gift_materials.webp           : 参加特典画像
 
       GitHub Pagesで使う場合：
       - HTMLと同階層に images フォルダを作る
@@ -255,25 +251,6 @@
       background: rgba(255, 231, 237, .88);
       z-index: -1;
       transform: rotate(8deg);
-    }
-
-    .photo-card > img {
-      width: 100%;
-      height: auto;
-      border-radius: 25px;
-      object-fit: cover;
-    }
-
-    .hero__visual .photo-card > img {
-      aspect-ratio: 4 / 5;
-    }
-
-    .image-card-small > img {
-      aspect-ratio: 4 / 3;
-    }
-
-    .profile-photo > img {
-      aspect-ratio: 3 / 4;
     }
 
     .image-placeholder {
@@ -662,32 +639,6 @@
       font-weight: 700;
     }
 
-    .voice-head {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin-bottom: 16px;
-    }
-
-    .voice-icon {
-      flex: 0 0 auto;
-      width: 52px;
-      height: 52px;
-      border-radius: 50%;
-      overflow: hidden;
-      background: #fff3f5;
-      border: 1px solid var(--line);
-      display: grid;
-      place-items: center;
-    }
-
-    .voice-icon img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-
     .final-cta {
       text-align: center;
       background: linear-gradient(180deg, #fffaf7 0%, #fff0f4 100%);
@@ -830,7 +781,13 @@
 
         <div class="hero__visual">
           <figure class="photo-card" aria-label="ヒーロー画像">
-            <img src="images/hero_mother_child.webp" alt="親子で穏やかに過ごす母親と子ども" loading="eager">
+            <!-- 画像差し替え：下記のplaceholderを削除し、次のimgを有効化してください。
+            <img src="images/hero_mother_child.webp" alt="親子で穏やかに過ごす母親と子ども">
+            -->
+            <div class="image-placeholder">
+              ヒーロー画像<br>
+              <small>images/hero_mother_child.webp を後でリンク</small>
+            </div>
           </figure>
           <div class="hero__stamp"><span><strong>無料</strong><br>オンライン<br>セミナー</span></div>
         </div>
@@ -841,7 +798,13 @@
       <section class="section section--tight">
         <div class="container worries">
           <figure class="photo-card image-card-small" aria-label="悩んでいる母親の画像">
-            <img src="images/worried_mother.webp" alt="子育てに悩む母親" loading="lazy">
+            <!-- 画像差し替え：
+            <img src="images/worried_mother.webp" alt="子育てに悩む母親">
+            -->
+            <div class="image-placeholder">
+              悩みセクション画像<br>
+              <small>images/worried_mother.webp を後でリンク</small>
+            </div>
           </figure>
 
           <div class="simple-card">
@@ -933,7 +896,13 @@
       <section class="section">
         <div class="container profile simple-card">
           <figure class="photo-card profile-photo" aria-label="講師写真">
-            <img src="images/lecturer.webp" alt="講師プロフィール写真" loading="lazy">
+            <!-- 画像差し替え：
+            <img src="images/lecturer.webp" alt="講師プロフィール写真">
+            -->
+            <div class="image-placeholder">
+              講師写真<br>
+              <small>images/lecturer.webp を後でリンク</small>
+            </div>
           </figure>
 
           <div>
@@ -971,7 +940,13 @@
           </div>
 
           <figure class="photo-card image-card-small" aria-label="プレゼント資料画像">
-            <img src="images/gift_materials.webp" alt="参加特典のPDF資料イメージ" loading="lazy">
+            <!-- 画像差し替え：
+            <img src="images/gift_materials.webp" alt="参加特典のPDF資料イメージ">
+            -->
+            <div class="image-placeholder">
+              参加特典画像<br>
+              <small>images/gift_materials.webp を後でリンク</small>
+            </div>
           </figure>
         </div>
       </section>
@@ -979,7 +954,13 @@
       <section class="section consult">
         <div class="container consult-box">
           <figure class="photo-card image-card-small" aria-label="個別相談画像">
-            <img src="images/consultation.webp" alt="オンライン個別相談のイメージ" loading="lazy">
+            <!-- 画像差し替え：
+            <img src="images/consultation.webp" alt="オンライン個別相談のイメージ">
+            -->
+            <div class="image-placeholder">
+              個別相談画像<br>
+              <small>images/consultation.webp を後でリンク</small>
+            </div>
           </figure>
 
           <div>
@@ -1006,25 +987,16 @@
 
           <div class="voice-grid">
             <article class="voice-card">
-              <div class="voice-head">
-                <span class="voice-icon" aria-hidden="true"><img src="images/voice_mama_6.webp" alt="" loading="lazy"></span>
-                <small>6歳のお子さんのママ / 仮文</small>
-              </div>
               <p>「怒る前に一呼吸置ける場面が増えました。」</p>
+              <small>6歳のお子さんのママ / 仮文</small>
             </article>
             <article class="voice-card">
-              <div class="voice-head">
-                <span class="voice-icon" aria-hidden="true"><img src="images/voice_mama_4.webp" alt="" loading="lazy"></span>
-                <small>4歳のお子さんのママ / 仮文</small>
-              </div>
               <p>「子どもが聞かない理由を責めずに見られるようになりました。」</p>
+              <small>4歳のお子さんのママ / 仮文</small>
             </article>
             <article class="voice-card">
-              <div class="voice-head">
-                <span class="voice-icon" aria-hidden="true"><img src="images/voice_mama_8.webp" alt="" loading="lazy"></span>
-                <small>8歳のお子さんのママ / 仮文</small>
-              </div>
               <p>「具体例が多く、家で試すイメージが持てました。」</p>
+              <small>8歳のお子さんのママ / 仮文</small>
             </article>
           </div>
         </div>
